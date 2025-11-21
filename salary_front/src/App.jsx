@@ -145,7 +145,11 @@ export default function App() {
           }}
         />
       </div>
-
+      {/* Final Remaining */}
+      <h2 style={{ marginTop: 25, fontWeight: "bold" }}>
+        Final Remaining: ₹{grandRemaining}
+      </h2>
+      
       {/* Sections */}
       {sections.map((sec, si) => {
         const sectionTotal = calcSectionTotal(sec);
@@ -303,10 +307,10 @@ export default function App() {
         + Add Section
       </button>
 
-      {/* Final Remaining */}
+      {/* Final Remaining
       <h2 style={{ marginTop: 25, fontWeight: "bold" }}>
         Final Remaining: ₹{grandRemaining}
-      </h2>
+      </h2> */}
     </div>
   );
 }
