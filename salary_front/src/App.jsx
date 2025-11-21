@@ -149,7 +149,7 @@ export default function App() {
       <h2 style={{ marginTop: 25, fontWeight: "bold" }}>
         Final Remaining: ₹{grandRemaining}
       </h2>
-      
+
       {/* Sections */}
       {sections.map((sec, si) => {
         const sectionTotal = calcSectionTotal(sec);
@@ -165,6 +165,13 @@ export default function App() {
         return (
           <div
             key={sec.id}
+            tabIndex={0} 
+            onKeyDown={(e) => {
+              if(e.ctrlKey && e.key.toLowerCase() === "i"){
+                e.preventDefault();
+                addRow(sec.id);
+              }
+            }}
             className="section-box"
             style={{
               marginTop: 25,
